@@ -33,11 +33,11 @@ function Login() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "https://rishijob.com:5000/api/v1/courses",
+        "https://nodebackend.kavalarnalantn.in:5000/user_Register/authenticate",
         data
       );
-      console.log(response, "response45234523")
-      // router.navigate(`/CandidateRegister?username=${response.data?.userName}`);
+      console.log(response, "response45234523");
+      router.navigate(`/CandidateRegister?username=${response.data?.userName}`);
     } catch (error) {
       Alert.alert("Username or Password is incorrect");
       console.log("Error:", error);
